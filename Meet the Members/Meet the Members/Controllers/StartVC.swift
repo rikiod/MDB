@@ -25,7 +25,7 @@ class StartVC: UIViewController {
         // == UIColor.darkGray
         label.textColor = .darkGray
         
-        label.text = "Meet the Member"
+        label.text = "Meet the Members"
         
         // == NSTextAlignment(expected type).center
         label.textAlignment = .center
@@ -43,8 +43,7 @@ class StartVC: UIViewController {
         let button = UIButton()
         
         button.setTitle("Start", for: .normal)
-        
-        button.setTitleColor(.blue, for: .normal)
+        button.setTitleColor(.white, for: .normal)
         
         // MARK: STEP 1: UIButton Customization
         // Action Items:
@@ -57,7 +56,8 @@ class StartVC: UIViewController {
         // where you will find all the available APIs.
         
         // MARK: >> Your Code Here <<
-        
+        button.backgroundColor = .systemGreen
+    
         button.translatesAutoresizingMaskIntoConstraints = false
         
         return button
@@ -96,7 +96,7 @@ class StartVC: UIViewController {
         // |-----| label |-----|
         // |              -50pt
         // |
-        // y
+        // 
         //
         NSLayoutConstraint.activate([
             // You can use the view.topAnchor. But it's different, why?
@@ -112,9 +112,15 @@ class StartVC: UIViewController {
         ])
         
         // MARK: >> Your Code Here <<
+        view.addSubview(startButton)
         
         NSLayoutConstraint.activate([
             // MARK: >> Your Code Here <<
+            startButton.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 200),
+            startButton.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 50),
+            startButton.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -50)
+
+            
         ])
         
         
@@ -141,6 +147,7 @@ class StartVC: UIViewController {
     @objc func didTapStart(_ sender: UIButton) {
         // Initialize an instance of MainVC
         let vc = MainVC()
+        vc.modalPresentationStyle = .fullScreen
         // Use the present function to modally present the MainVC
         present(vc, animated: true, completion: nil)
     }

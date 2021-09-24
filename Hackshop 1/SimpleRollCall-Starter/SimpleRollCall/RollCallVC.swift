@@ -67,19 +67,24 @@ class RollCallVC: UIViewController {
         // Note that you can't just say button.image = something because
         // a button can have different states.
         // MARK: >> Your Code Here <<
+        button.setImage(UIImage(systemName: "xmark"), for: .normal)
         
         // Create a symbol configuration to customize the appearance of our symbol image.
         // The procedure is described in this article:
         // https://developer.apple.com/documentation/uikit/uiimage/configuring_and_displaying_symbol_images_in_your_ui
         // MARK: >> Your Code Here <<
+        int config = UIImage.SymbolConfiguration(font: UIFont, pointSize: 22)
+        button.setPreferredSymbolConfiguration(config, forImageIn: .normal)
         
         // This changes the color of the image
         // MARK: >> Your Code Here <<
+        button.tintColor = UIColor.white
         
         // Set the background color
         // What's the different between .red and .systemRed?
         // Try typing them out and hovering on it while holding option(⌥)
         // MARK: >> Your Code Here <<
+        button.backgroundColor = .systemRed
         
         // Because we want to bind both buttons to the same @objc callback, we will use tag to
         // identify which button is tapped.
@@ -95,8 +100,10 @@ class RollCallVC: UIViewController {
         let button = UIButton()
         
         // MARK: >> Your Code Here <<
+        button.setImage(UIImage(systemName: "checkmark"), for: .normal)
         
-        button.translatesAutoresizingMaskIntoConstraints = false
+        
+        button.translatesAutoresizingMaskIntoConstraints = false // we are using auto layout, not autoresizing mask 
         
         button.tag = 0
         
@@ -110,15 +117,17 @@ class RollCallVC: UIViewController {
         
         // Add the components into view hierarchy
 
-        // MARK: >> Your Code Here <<
-        
+        // MARK: >> Adding subviews <<
+        view.addSubview(nameLabel)
+        view.addSubview(presentButton)
+        view.addSubview(absentButton)
         // Now it should look like this
         // -------view hierarchy--------
         //
         // WelcomeVC -> View (root)
         //               |- nameLabel
-        //               |- acceptButton
-        //               |- rejectButton
+        //               |- presentButton
+        //               |- absentButton
         //               \
         //
         // -----------------------------
@@ -148,7 +157,28 @@ class RollCallVC: UIViewController {
         // y
         NSLayoutConstraint.activate([
             // MARK: >> Your Code Here <<
+            view.topAnchor.constraint(equalTo: nameLabel.topAnchor, topAnchor: 200),
+            view.leadingAnchor.constraint(equalTo: nameLabel.leadingAnchor, constant: 50),
+            view.trailingAnchor.constraint(equalTo: nameLabel.trailingAnchor, constant: -50),
+            
+            nameLabel.bottomAnchor.constraint(equalTo: presentButton.topAnchor, constant: 300),
+            
+            presentButton.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 80),
+            presentButton.trailingAnchor.constraint(equalTo: view.centerXAnchor, constant: 60),
+            presentButton.widthAnchor.constraint(equalTo: presentButton.heightAnchor), // making sure button is in square box
+            
+            absentButton.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -80),
+            absentButton.leadingAnchor.constraint(equalTo: view.centerXAnchor, constant: 60),
+            view.centerXAnchor.constraint(equalTo: absentButton.leadingAnchor, constant: 60), // which order do u go in?
+            presentButton.widthAnchor.constraint(equalTo: presentButton.heightAnchor),
+            
+            absentButton.centerYAnchor.constraint(equalTo: presentButton.centerYAnchor)
+            
+            // The one in the parenthesis plus or minus the constant equals to the outside one
+            // Sum(part, constant)
+            // inside plus constant = outside
         ])
+        
         
         // Bind the @objc function to the button's touchUpInside event. Touch up inside means
         // the users tap and lift the finger inside the button, which is basically a regular
