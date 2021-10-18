@@ -147,6 +147,23 @@ class SigninVC: UIViewController {
         }
         
         /* TODO: Hackshop */
+        SOCAuthManager.shared.signIn(withEmail: email, password: password, completion: { (result: Result<SOCUser, SOCAuthManager.SignInErrors>)->Void in
+            switch result {
+            case .success(let user):
+                guard let window = UIApplication.shared.windows.filter({ $0.isKeyWindow }).first else { return } // getting current instance fo the window
+                let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController()
+                window.rootViewController = vc
+                let options: UIView.AnimationOptions = .transitionCrossDissolve
+                let duration: TimeInterval = 0.3
+                UIView.transition(with: window, duration: duration, options: options, animations: {}, completion: nil)
+                //can also just write "make key invisible" as in the scene delegate
+            case .failure(let error):
+                switch error {
+                case .userNotFound:
+                    self.showErrorBanner(withTitle: "User not found", subtitle: "Please check username")
+                default:
+                    self.showErrorBanner(withTitle: "Unknown error", subtitle: "")
+                }
     }
     
     @objc private func didTapSignUp(_ sender: UIButton) {

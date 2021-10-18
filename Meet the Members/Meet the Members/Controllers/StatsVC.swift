@@ -71,6 +71,7 @@ class StatsVC: UIViewController {
         
         label.translatesAutoresizingMaskIntoConstraints = false
         
+        
         return label
     }()
     
@@ -121,7 +122,7 @@ class StatsVC: UIViewController {
             statisticsLabel.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -50)
         ])
         
-        backButton.addTarget(self, action: #selector(didTapBack(_:)), for: .touchUpInside)
+        
 
     }
     

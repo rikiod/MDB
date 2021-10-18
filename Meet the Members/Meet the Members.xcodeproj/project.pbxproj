@@ -23,7 +23,7 @@
 		1A3E0B0725B65F9A00345370 /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		1A3E0B0A25B6638A00345370 /* MainVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainVC.swift; sourceTree = "<group>"; };
 		1A3E0B0E25B66B6000345370 /* StatsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatsVC.swift; sourceTree = "<group>"; };
-		1A4309E625B644D8007C0DBA /* Meet the Members.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Meet the Members.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		1A4309E625B644D8007C0DBA /* Meet the Member.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Meet the Member.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		1A4309E925B644D8007C0DBA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1A4309EB25B644D8007C0DBA /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		1A4309ED25B644D8007C0DBA /* StartVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartVC.swift; sourceTree = "<group>"; };
@@ -82,7 +82,7 @@
 		1A4309E725B644D8007C0DBA /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				1A4309E625B644D8007C0DBA /* Meet the Members.app */,
+				1A4309E625B644D8007C0DBA /* Meet the Member.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -117,7 +117,7 @@
 			);
 			name = "Meet the Members";
 			productName = "Meet the Member";
-			productReference = 1A4309E625B644D8007C0DBA /* Meet the Members.app */;
+			productReference = 1A4309E625B644D8007C0DBA /* Meet the Member.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -309,7 +309,7 @@
 			};
 			name = Release;
 		};
-		1A4309FB25B644D9007C0DBA /* Debug */ = {
+		1A4309FB25B644D9007C0DBA /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -328,6 +328,19 @@
 			};
 			name = Release;
 		};
+		BFE38AD82703B2F300E551BF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				INFOPLIST_FILE = "$(SRCROOT)/Meet the Members/Support Files/Info.plist";
+				PRODUCT_NAME = "Meet the Member";
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -343,8 +356,8 @@
 		1A4309FA25B644D9007C0DBA /* Build configuration list for PBXNativeTarget "Meet the Members" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				1A4309FB25B644D9007C0DBA /* Debug */,
-				1A4309FC25B644D9007C0DBA /* Release */,
+				1A4309FB25B644D9007C0DBA /* Release */,
+				BFE38AD82703B2F300E551BF /* Debug */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
