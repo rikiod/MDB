@@ -32,8 +32,11 @@
 		1AFB4D86271C22FD006621E9 /* FeedVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AFB4D85271C22FD006621E9 /* FeedVC.swift */; };
 		1AFB4D88271C2327006621E9 /* FeedNavigationVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AFB4D87271C2327006621E9 /* FeedNavigationVC.swift */; };
 		1AFB4D8A271C23D9006621E9 /* Auth.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1AFB4D89271C23D9006621E9 /* Auth.storyboard */; };
+		BF62BC0F27408119000F7E7F /* SOCStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF62BC0E27408119000F7E7F /* SOCStorage.swift */; };
+		BF62BC1127419FA5000F7E7F /* EventDetailsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF62BC1027419FA4000F7E7F /* EventDetailsVC.swift */; };
 		BF9D9C23272C9D0800AA31C1 /* SignUpVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF9D9C22272C9D0800AA31C1 /* SignUpVC.swift */; };
-		BF9D9C25272F200300AA31C1 /* CellVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF9D9C24272F200300AA31C1 /* CellVC.swift */; };
+		BF9D9C25272F200300AA31C1 /* EventCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF9D9C24272F200300AA31C1 /* EventCell.swift */; };
+		BFA40B532738620200FC0ABF /* CreateEventVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFA40B522738620200FC0ABF /* CreateEventVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -59,8 +62,11 @@
 		1AFB4D85271C22FD006621E9 /* FeedVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedVC.swift; sourceTree = "<group>"; };
 		1AFB4D87271C2327006621E9 /* FeedNavigationVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedNavigationVC.swift; sourceTree = "<group>"; };
 		1AFB4D89271C23D9006621E9 /* Auth.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Auth.storyboard; sourceTree = "<group>"; };
+		BF62BC0E27408119000F7E7F /* SOCStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SOCStorage.swift; sourceTree = "<group>"; };
+		BF62BC1027419FA4000F7E7F /* EventDetailsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventDetailsVC.swift; sourceTree = "<group>"; };
 		BF9D9C22272C9D0800AA31C1 /* SignUpVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpVC.swift; sourceTree = "<group>"; };
-		BF9D9C24272F200300AA31C1 /* CellVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellVC.swift; sourceTree = "<group>"; };
+		BF9D9C24272F200300AA31C1 /* EventCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventCell.swift; sourceTree = "<group>"; };
+		BFA40B522738620200FC0ABF /* CreateEventVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateEventVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -137,6 +143,7 @@
 				1ADC58692712504F0067693B /* SOCEvent.swift */,
 				1ADC586B271250B50067693B /* SOCAuthManager.swift */,
 				1ADC586D271253E90067693B /* SOCDBRequest.swift */,
+				BF62BC0E27408119000F7E7F /* SOCStorage.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -168,7 +175,9 @@
 			children = (
 				1AFB4D85271C22FD006621E9 /* FeedVC.swift */,
 				1AFB4D87271C2327006621E9 /* FeedNavigationVC.swift */,
-				BF9D9C24272F200300AA31C1 /* CellVC.swift */,
+				BF9D9C24272F200300AA31C1 /* EventCell.swift */,
+				BFA40B522738620200FC0ABF /* CreateEventVC.swift */,
+				BF62BC1027419FA4000F7E7F /* EventDetailsVC.swift */,
 			);
 			path = Feed;
 			sourceTree = "<group>";
@@ -260,17 +269,20 @@
 				1ADC5868271250090067693B /* SOCUser.swift in Sources */,
 				1ADC586C271250B50067693B /* SOCAuthManager.swift in Sources */,
 				1ADC587A271255460067693B /* LoadingButton.swift in Sources */,
+				BFA40B532738620200FC0ABF /* CreateEventVC.swift in Sources */,
 				1ADC5882271255DC0067693B /* UIViewController+HideKeyboard.swift in Sources */,
 				1ADC5880271255DC0067693B /* UIColor+ColorScheme.swift in Sources */,
+				BF62BC0F27408119000F7E7F /* SOCStorage.swift in Sources */,
 				1AFB4D88271C2327006621E9 /* FeedNavigationVC.swift in Sources */,
 				1ADC586E271253E90067693B /* SOCDBRequest.swift in Sources */,
 				1ADC5879271255460067693B /* SigninVC.swift in Sources */,
 				BF9D9C23272C9D0800AA31C1 /* SignUpVC.swift in Sources */,
-				BF9D9C25272F200300AA31C1 /* CellVC.swift in Sources */,
+				BF9D9C25272F200300AA31C1 /* EventCell.swift in Sources */,
 				1ADC586A271250500067693B /* SOCEvent.swift in Sources */,
 				1AFB4D86271C22FD006621E9 /* FeedVC.swift in Sources */,
 				1ADC5846271249AB0067693B /* AppDelegate.swift in Sources */,
 				1ADC5881271255DC0067693B /* UIColor+Hex.swift in Sources */,
+				BF62BC1127419FA5000F7E7F /* EventDetailsVC.swift in Sources */,
 				1ADC5878271255460067693B /* HorizontalActionLabel.swift in Sources */,
 				1ADC5848271249AB0067693B /* SceneDelegate.swift in Sources */,
 				1ADC587B271255460067693B /* AuthTextField.swift in Sources */,
@@ -422,6 +434,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 947LKD8G3R;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "MDB Social/Info.plist";
 				INFOPLIST_KEY_CFBundleDisplayName = "MDB Social";
@@ -450,6 +463,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 947LKD8G3R;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "MDB Social/Info.plist";
 				INFOPLIST_KEY_CFBundleDisplayName = "MDB Social";

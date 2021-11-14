@@ -7,7 +7,7 @@
 
 import UIKit
 
-class DetailsVC: UIViewController { // what is an NSObject?
+class DetailsVC: UIViewController {
     
     let pokemon: Pokemon?
         

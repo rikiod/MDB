@@ -164,9 +164,7 @@ class SignUpVC: UIViewController {
     }
     
     @objc func didTapCancel(_ sender: UIButton) {
-        let vc = SigninVC()
-        vc.modalPresentationStyle = .fullScreen
-        present(vc, animated: true, completion: nil)
+        self.dismiss(animated: true, completion: nil)
     }
     
     @objc func didTapSignUp(_ sender: UIButton) {

@@ -1,5 +1,5 @@
 //
-//  CellVC.swift
+//  EventCell.swift
 //  MDB Social
 //
 //  Created by Rikio Dahlgren on 10/31/21.
@@ -8,9 +8,9 @@
 import UIKit
 import FirebaseStorage
 
-class CellVC: UICollectionViewCell {
+class EventCell: UICollectionViewCell {
     
-    static let reuseIdentifier: String = String(describing: CellVC.self)
+    static let reuseIdentifier: String = String(describing: EventCell.self)
     
     private var rsvpNames: [String] = []
     
